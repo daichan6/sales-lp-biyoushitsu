@@ -1985,11 +1985,15 @@ section.block{
   position: fixed;
   bottom: 18px;
   left: 50%;
-  transform: translateX(-50%) translateY(120%);
+  transform: translateX(-50%) translateY(150%);
   z-index: 90;
   transition: transform .5s var(--ease);
   width: calc(100% - 32px);
   max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 .float-cta.show{ transform: translateX(-50%) translateY(0); }
 .float-cta .cta-primary{
@@ -1997,6 +2001,40 @@ section.block{
   padding: 18px 24px;
   font-size: 14px;
   box-shadow: 0 16px 40px rgba(26, 20, 16, 0.4);
+}
+.float-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(26, 20, 16, 0.25);
+  border: 1px solid rgba(181, 138, 75, 0.4);
+  white-space: nowrap;
+}
+.float-badge strong{
+  color: var(--gold);
+  font-weight: 600;
+  font-family: var(--serif);
+  letter-spacing: 0.04em;
+}
+.float-badge-dot{
+  width: 7px; height: 7px;
+  background: var(--umber);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(161, 74, 45, 0.6);
+  animation: floatPulse 1.6s infinite var(--ease);
+}
+@keyframes floatPulse{
+  0%{ box-shadow: 0 0 0 0 rgba(161, 74, 45, 0.6); }
+  70%{ box-shadow: 0 0 0 8px rgba(161, 74, 45, 0); }
+  100%{ box-shadow: 0 0 0 0 rgba(161, 74, 45, 0); }
 }
 @media(min-width: 980px){ .float-cta{ display: none; } }
 
@@ -2684,6 +2722,10 @@ section.block{
 
 <!-- Floating CTA (mobile) -->
 <div class="float-cta" id="floatCta">
+  <span class="float-badge">
+    <span class="float-badge-dot"></span>
+    今月の無料制作枠 <strong>残り 5 名様</strong>
+  </span>
   <a href="https://www.instagram.com/fuji_web_design_biyou1/" class="cta-primary">
     無料で受け取る
     <span class="cta-arrow">↗</span>
