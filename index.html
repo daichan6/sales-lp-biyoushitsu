@@ -460,6 +460,32 @@ body{
 }
 .hero-meta-top .sep{ color: var(--line); }
 
+/* Hero scarcity badge */
+.hero-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  border: 1px solid rgba(181, 138, 75, 0.4);
+  box-shadow: 0 10px 24px rgba(26, 20, 16, 0.18);
+  margin-bottom: 32px;
+  width: fit-content;
+  opacity: 0;
+  animation: fadeUp .9s var(--ease) .1s forwards;
+}
+.hero-badge strong{
+  color: var(--gold);
+  font-weight: 600;
+  font-family: var(--serif);
+  letter-spacing: 0.04em;
+}
+
 /* Hero title - editorial composition */
 .hero-title{
   font-family: var(--serif);
@@ -2107,6 +2133,11 @@ section.block{
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero" id="hero">
   <div class="hero-content">
+    <span class="hero-badge">
+      <span class="float-badge-dot"></span>
+      今月の無料制作枠 <strong>残り 5 名様</strong>
+    </span>
+
     <h1 class="hero-title">
       <span class="line"><span class="reveal"><span class="em">無料</span>で作る、</span></span>
       <span class="line"><span class="reveal">24時間働く</span></span>
